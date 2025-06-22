@@ -5,6 +5,7 @@ use std::sync::{
 };
 #[cfg(feature = "http")]
 use tower_service::Service;
+#[allow(clippy::wildcard_imports)]
 use worker::*;
 
 mod alarm;
@@ -75,6 +76,7 @@ type HandlerResponse = http::Response<axum::body::Body>;
 #[cfg(not(feature = "http"))]
 type HandlerResponse = Response;
 
+#[allow(clippy::missing_errors_doc, clippy::missing_panics_doc)]
 #[event(fetch, respond_with_errors)]
 pub async fn main(
     request: HandlerRequest,
