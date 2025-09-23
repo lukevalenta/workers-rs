@@ -35,7 +35,7 @@ impl DurableObject for MyDurableObject {
         // Wait long enough for the DO to hibernate.
         self.state
             .storage()
-            .set_alarm(Duration::from_secs(10))
+            .set_alarm(Duration::from_secs(15))
             .await?;
 
         console_log!("Alarm fired");

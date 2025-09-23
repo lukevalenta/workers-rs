@@ -7,12 +7,12 @@ export class MyDurableObject extends DurableObject {
 	}
 
 	async fetch() {
-        this.storage.setAlarm(Date.now() + 1);
+    await this.storage.setAlarm(Date.now() + 1);
 		return new Response();
 	}
 
     async alarm() {
-        this.storage.setAlarm(Date.now() + 1000);
+        await this.storage.setAlarm(Date.now() + 1000);
         console.log("Alarm fired");
     }
 }

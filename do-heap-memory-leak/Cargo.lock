@@ -96,7 +96,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "do-alarm-memory-leak"
+name = "do-heap-memory-leak"
 version = "0.1.0"
 dependencies = [
  "worker",
