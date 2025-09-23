@@ -9,7 +9,7 @@ members = [
     "examples/*",
     "test/container-echo"
 ]
-exclude = ["examples/coredump", "examples/axum", "templates/*", "wasm-bindgen", "do-alarm-memory-leak"]
+exclude = ["examples/coredump", "examples/axum", "templates/*", "wasm-bindgen", "do-alarm-memory-leak", "do-heap-memory-leak"]
 resolver = "2"
 
 [workspace.dependencies]
