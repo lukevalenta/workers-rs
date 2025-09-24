@@ -1,3 +1,4 @@
+.wrangler
 **/target
 .DS_Store
 **/worker/generated/*
