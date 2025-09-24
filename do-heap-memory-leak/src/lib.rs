@@ -27,7 +27,6 @@ impl DurableObject for MyDurableObject {
     }
     async fn fetch(&self, mut _req: Request) -> Result<Response> {
         self.state.storage().set_alarm(Duration::from_secs(1)).await?;
-        console_log!("Scheduled alarm");
         Response::empty()
     }
 
@@ -37,8 +36,6 @@ impl DurableObject for MyDurableObject {
             .storage()
             .set_alarm(Duration::from_secs(15))
             .await?;
-
-        console_log!("Alarm fired");
 
         Response::empty()
     }
