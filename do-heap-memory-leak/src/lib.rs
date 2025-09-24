@@ -22,7 +22,7 @@ impl DurableObject for MyDurableObject {
     fn new(state: State, _env: Env) -> Self {
         Self {
             state,
-            _buffer: Vec::with_capacity(100_000_000)
+            _buffer: Vec::with_capacity(10_000_000)
          }
     }
     async fn fetch(&self, mut _req: Request) -> Result<Response> {

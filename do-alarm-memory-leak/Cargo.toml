@@ -10,4 +10,4 @@ release = false
 crate-type = ["cdylib"]
 
 [dependencies]
-worker = { version = "0.6.5" }
+worker = { version = "0.6.6" }
